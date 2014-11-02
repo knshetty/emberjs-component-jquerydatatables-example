@@ -1,0 +1,160 @@
+IT-eBooks-API
+Help => http://it-ebooks-api.info/
+E.g. => 
+	- http://it-ebooks-api.info/v1/search/ember
+	- http://it-ebooks-api.info/v1/search/9781449318833
+
+
+SPA Technology
+-------------
+Building Web Apps with Ember.js, 2014
+Jesse Cravens, Thomas Brady
+http://it-ebooks.info/book/3596/
+
+Ember.js Application Development How-to, 2013
+Marc Bodmer
+http://it-ebooks.info/book/2032/
+
+
+
+Scripting Languages
+-------------------
+CoffeeScript in Action, 2014
+Patrick Lee
+http://it-ebooks.info/book/3788/
+
+Programming JavaScript Applications, 2014
+Eric Elliott
+http://it-ebooks.info/book/3528/
+
+Async JavaScript, 2012
+Trevor Burnham
+http://it-ebooks.info/book/1284
+
+Learning JavaScript Design Patterns, 2012
+Addy Osmani
+http://it-ebooks.info/book/724/
+
+Programming in CoffeeScript, 2012
+Mark Bates
+http://it-ebooks.info/book/1202/
+
+The Little Book on CoffeeScript, 2012
+Alex MacCaw
+http://it-ebooks.info/book/485/
+
+CoffeeScript, 2011
+Trevor Burnham
+http://it-ebooks.info/book/572/
+
+
+
+HTML
+-----
+HTML5 and CSS3 Responsive Web Design Cookbook, 2013
+Benjamin LaGrone
+http://it-ebooks.info/book/2924/
+
+HTML5 Hacks, 2012
+Jesse Cravens, Jeff Burtoft
+http://it-ebooks.info/book/1966/
+
+HTML5 Cookbook, 2011
+Christopher Schmitt, Kyle Simpson
+http://it-ebooks.info/book/362/
+
+HTML5 Developer's Cookbook, 2011
+Chuck Hudson, Tom Leadbetter
+http://it-ebooks.info/book/1505/
+
+Pro HTML5 and CSS3 Design Patterns, 2011
+Michael Bowers, Dionysios Synodinos, Victor Sumner
+http://it-ebooks.info/book/899/
+
+
+
+UI Framework
+------------
+Twitter Bootstrap Web Development How-To, 2012
+David Cochran
+http://it-ebooks.info/book/2188/
+
+
+
+REST
+----
+RESTful Web APIs, 2013
+Leonard Richardson, Mike Amundsen, Sam Ruby
+http://it-ebooks.info/book/3060/
+
+RESTful Web Services Cookbook, 2010
+Subbu Allamaraju
+http://it-ebooks.info/book/392/
+
+
+
+Node.js
+-------
+Web Development with Node and Express, 2014
+Ethan Brown
+http://it-ebooks.info/book/3597/
+
+Node.js in Action, 2013
+Mike Cantelon, Marc Harter, T.J. Holowaychuk, Nathan Rajlich
+http://it-ebooks.info/book/3782/
+
+Pro Node.js for Developers, 2013
+Colin Ihrig
+http://it-ebooks.info/book/3147/
+
+Learning Node.js, 2013
+Marc Wandschneider
+http://it-ebooks.info/book/3687/
+
+Professional Node.js, 2012
+Pedro Teixeira
+http://it-ebooks.info/book/984/
+
+Node for Front-End Developers, 2012
+Garann Means
+http://it-ebooks.info/book/643/
+
+
+
+Testing
+-------
+Using Node.js for UI Testing, 2013
+Pedro Teixeira
+http://it-ebooks.info/book/2785/
+
+
+
+Web App
+-------
+Socket.IO Real-time Web Application Development, 2013
+Rohit Rai
+http://it-ebooks.info/book/2724/
+
+HTML5 Web Application Development By Example, 2013
+J.M. Gustafson
+http://it-ebooks.info/book/2958/
+
+Activiti in Action, 2012
+Tijs Rademakers
+http://it-ebooks.info/book/852/
+
+Getting Started with GEO, CouchDB, and Node.js, 2011
+Mick Thompson
+http://it-ebooks.info/book/571/
+
+Building Hypermedia APIs with HTML5 and Node, 2011
+Mike Amundsen
+http://it-ebooks.info/book/357/
+
+
+
+Analytics
+------
+Hadoop in Practice, 2012
+Alex Holmes
+http://it-ebooks.info/book/1028/
