@@ -7,7 +7,7 @@ Book = DS.Model.extend {
 }
 
 Book.reopenClass(
-	FIXTURES: [ {id: 1, title: 'Building Web Apps with Ember.js, 2014 Boys', author: 'Jesse Cravens, Thomas Brady', image: 'http://s.it-ebooks-api.info/3/building_web_apps_with_ember.js.jpg'},
+	FIXTURES: [ {id: 1, title: 'Building Web Apps with Ember.js, 2014', author: 'Jesse Cravens, Thomas Brady', image: 'http://s.it-ebooks-api.info/3/building_web_apps_with_ember.js.jpg'},
 				{id: 2, title: 'Ember.js Application Development How-to, 2013', author: 'Marc Bodmer', image: 'http://s.it-ebooks-api.info/14/ember.js_application_development_how-to.jpg'},
 				{id: 3, title: 'CoffeeScript in Action, 2014', author: 'Patrick Lee', image: 'http://s.it-ebooks-api.info/5/coffeescript_in_action.jpg'},
 				{id: 4, title: 'Programming JavaScript Applications, 2014', author: 'Eric Elliott', image: 'http://s.it-ebooks-api.info/3/programming_javascript_applications.jpg'},

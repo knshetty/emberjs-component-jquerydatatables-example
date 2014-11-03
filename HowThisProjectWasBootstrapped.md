@@ -1,6 +1,6 @@
--------------------------------------------
-How this Ember-cli project was bootstrapped
--------------------------------------------
+--------------------------------------------------------
+How this Ember-cli project was bootstrapped from scratch
+--------------------------------------------------------
 Version/toolchain in use:
 	- ember-cli version: 0.1.2
 	- node: 0.10.32
@@ -28,8 +28,8 @@ Step1: Setup ember-cli project
 		ii. Jquery.dataTables dependencies
 		iii. Datatables-Bootstrap3 dependencies
 	
-	E. Content Security Policy for download external resources
-		Enable content security policy in-order to download external resources, such as images. Respective configure file is 'config/environment.js' and the configuration property is as follows:
+	E. Setup content security policy
+		Enable content security policy in-order to download external resources, such as images. Configuration is carried out in 'config/environment.js' & set the following property:
 		
 			var ENV = {
 				...
@@ -41,10 +41,10 @@ Step1: Setup ember-cli project
 
 	F. Conduct a basic smoke test
 		$ ember server
-		Now, the URL of this app is => localhost:4200/
+		Visit the running app at http://0.0.0.0:4200/emberjs-component-jquerydatatables-example
 	
 Step2: Enable CoffeeScript (instead of JavaScript):
-	Install CoffeeScript compatible 'ember generate command'
+	Install ember-cli CoffeeScript code generator
 		$ npm install ember-cli-coffeescript --save-dev
 
 References:
