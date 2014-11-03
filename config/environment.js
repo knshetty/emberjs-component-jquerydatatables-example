@@ -2,9 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-jquery-datatables',
+    modulePrefix: 'emberjs-component-jquerydatatables-example',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/emberjs-component-jquerydatatables-example',
     locationType: 'auto',
     contentSecurityPolicy: {
 		'img-src': "'self' s.it-ebooks-api.info"
