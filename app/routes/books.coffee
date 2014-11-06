@@ -7,7 +7,7 @@ BooksRoute = Ember.Route.extend(
 	# array-list. Resulting array-list to be used for rendering jQuery-DataTables.
 	setupController: (controller, model) ->
 	
-		this.store.find('book').then( (response) -> # Extract Ember-data model
+		@store.find('book').then( (response) -> # Extract Ember-data model
 			# Load the extracted book/s into the local-model
 			controller.set('model', response)
 			

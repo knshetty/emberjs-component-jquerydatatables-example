@@ -12,7 +12,7 @@ JqueryDatatablesComponent = Ember.Component.extend(
 			'deferRender': true,
 			'bProcessing': true,
 			'aaData': theController.get('modelAsList'),
-			'aoColumns': theController.get('datatableColumns'),
+			'aoColumns': theController.get('datatableColumns')
 		})
 		
 		self = @
