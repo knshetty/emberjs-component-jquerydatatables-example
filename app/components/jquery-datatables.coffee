@@ -13,7 +13,28 @@ JqueryDatatablesComponent = Ember.Component.extend(
 			'bProcessing': true,
 			'aaData': theController.get('modelAsList'),
 			'aoColumns': theController.get('datatableColumns')
-		})
+		}).each( ->
+			 dataTables = $(@)
+			 
+			 # --- Search Input Field: Customisation ---
+			 # Input: Superimpose Bootstrap3 component configuration & Add placeholder
+			 search_input = dataTables.closest('.dataTables_wrapper').find('div[id$=_filter] input')
+			 search_input.addClass('form-control input-sm')
+			 search_input.attr('placeholder', 'Search')
+			 
+			 # Label Text: Clear search label text
+			 search_label = dataTables.closest('.dataTables_wrapper').find('div[id$=_filter] label')
+			 search_label.replaceWith(search_input)
+			 
+			 # --- DataTables-Size Selector Customisation ---
+			 # Selection Box: Superimpose Bootstrap3 component configuration
+			 dataTablesSize_select = dataTables.closest('.dataTables_wrapper').find('div[id$=_length] select')
+			 dataTablesSize_select.addClass('form-control input-sm')
+			 
+			 # Label Text: Clear all the label text concerning dataTables-size
+			 dataTablesSize_label = dataTables.closest('.dataTables_wrapper').find('div[id$=_length] label')
+			 dataTablesSize_label.replaceWith(dataTablesSize_select)
+		)
 		
 		self = @
 		
