@@ -1,18 +1,20 @@
 `import Ember from 'ember'`
 
 JqueryDatatablesComponent = Ember.Component.extend(
+
 	tagName: 'div'
 		
 	classNames: ['ember-dataTables-container']
 	
 	didInsertElement: ->
-		theController = @get('value')
+	
+		theController = @get('_parentView.controller')
 
 		@$('.table').dataTable({
 			'deferRender': true,
 			'bProcessing': true,
-			'aaData': theController.get('modelAsList'),
-			'aoColumns': theController.get('datatableColumns')
+			'aaData': @get('value'),
+			'aoColumns': @get('columns')
 		}).each( ->
 			 dataTables = $(@)
 			 
@@ -36,39 +38,40 @@ JqueryDatatablesComponent = Ember.Component.extend(
 			 dataTablesSize_label.replaceWith(dataTablesSize_select)
 		)
 		
-		self = @
+		# --- Inline event listeners ---
+		context = @
 		
-		# Event listener for 'Delete' button action
+		# 'Delete' button action
 		@$('.table tbody').on('click', 'td .delete-control', ->
-			self._actionOnRow(@, (row) ->
-					theController.send('delete', row)
+			context._extractRowContent(@, (row) ->
+				theController.send('delete', row.id)
 			)
 		)
 		
-		# Event listener for 'Edit' button action
+		# 'Edit' button action
 		@$('.table tbody').on('click', 'td .edit-control', ->
-			self._actionOnRow(@, (row) ->
-				theController.send('edit', row)
+			context._extractRowContent(@, (row) ->
+				theController.send('edit', row.id)
 			)
 		)
 
-		# Event listener for 'Info' button action
+		# 'Info' button action
 		@$('.table tbody').on('click', 'td .info-control', ->
-			self._actionOnRow(@, (row) ->
-				theController.send('info', row)
+			context._extractRowContent(@, (row) ->
+				theController.send('info', row.id)
 			)
 		)
 	
-	_actionOnRow: (target, action) ->
-		table = @$('.table').DataTable()
+	_extractRowContent: (target, action) ->
 		tr = $(target).parents('tr')
+		table = @$('.table').DataTable()
 		rowContent = table.row(tr).data()
-		row = @get('value').findBy('id', rowContent.id)
-		action(row)
+		action(rowContent)
 		
 	_onContentChanged: ( ->
 		@rerender()
-	).observes('value.modelAsList.@each')
+	).observes('value.@each')
+	
 )
 
 `export default JqueryDatatablesComponent`

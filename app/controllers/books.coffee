@@ -1,27 +1,29 @@
 `import Ember from 'ember'`
 
-BooksController = Ember.ArrayController.extend(
+BooksController = Ember.Controller.extend(
 	
 	modelAsList: null
 	
 	book: null
 	
-	datatableColumns: [{'sTitle': 'Title', 'mData': 'title'},
-					   {'sTitle': 'Author', 'mData': 'author'},
-					   {'orderable': false, 'class': 'actions', 'data': '',
-					   'mRender': ->
-						   '<div class="btn-group btn-group-xs">' +
-							   '<a class="btn btn-sm btn-primary edit-control">Edit</a>' +
-							   '<a class="btn btn-sm btn-default info-control">Info</a>' +
-							   '<a class="btn btn-sm btn-danger delete-control">Delete</a>' +
-						   '</div>'
-					   }]
+	dataTables_Columns: [{'sTitle': 'Title', 'mData': 'title'},
+					     {'sTitle': 'Author', 'mData': 'author'},
+					     {'orderable': false, 'class': 'actions', 'data': '',
+							   'mRender': ->
+									  '<div class="btn-group btn-group-xs">' +
+										  '<a class="btn btn-sm btn-primary edit-control">Edit</a>' +
+										  '<a class="btn btn-sm btn-default info-control">Info</a>' +
+										  '<a class="btn btn-sm btn-danger delete-control">Delete</a>' +
+									  '</div>'
+						    }]
 	
 	actions:
 		create: ->
 			if (@title == '' || @author == '' || 
 				 @title == undefined || @author == undefined)
-				window.alert("Title/Author can't be empty, please provide these details for the new ebook.")
+				msg = "Title/Author can't be empty, please provide " +
+					  "these details for the new ebook."
+				window.alert(msg)
 			else
 				context = @
 				newBook = @store.createRecord('book', {'title': @title, 'author': @author, 'image': @image})
@@ -40,7 +42,9 @@ BooksController = Ember.ArrayController.extend(
 		update: ->
 			if (@get('book.title') == '' || @get('book.author') == '' ||
 				 @get('book.title') == undefined || @get('book.author') == undefined)
-				window.alert("Title/Author can't be empty, please provide these details for the ebook being edited.")
+				msg = "Title/Author can't be empty, please provide " +
+					  "these details for the ebook being edited."
+				window.alert(msg)
 			else
 				context = @
 				@get('book').save().then( ((response) ->
@@ -57,8 +61,11 @@ BooksController = Ember.ArrayController.extend(
 						console.log error
 				)
 		
-		delete: (bookToDelete)->
-			if window.confirm('Please confirm this deletion?')
+		delete: (bookId)->
+			bookToDelete = @get('model').findBy('data.id', bookId)
+			msg = 'Book: '+ bookToDelete.get('title') + ' will be ' + 
+				  'deleted. Please confirm this deletion?'
+			if window.confirm(msg)
 				context = @
 				bookToDelete.destroyRecord().then( ((response) ->
 						console.log 'BooksController: Deleted successfully'
@@ -70,11 +77,11 @@ BooksController = Ember.ArrayController.extend(
 		cancel: ->
 			@transitionToRoute('books')
 		
-		edit: (bookToEdit)->
-			@transitionToRoute('book.edit', bookToEdit)
+		edit: (bookId)->
+			@transitionToRoute('book.edit', bookId)
 			
-		info: (bookOfInterest)->
-			@transitionToRoute('book.info', bookOfInterest)
+		info: (bookId)->
+			@transitionToRoute('book.info', bookId)
 )
 
 `export default BooksController`
