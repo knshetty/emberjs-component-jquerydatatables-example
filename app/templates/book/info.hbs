@@ -1,12 +1,13 @@
-{{#bootstrap-modal-info title="eBook Details" cancel="cancel"}}
+{{#bootstrap-modal-info title   =  "eBook Details"
+                        cancel  =  "cancel"}}
 	<div id="bookimage">
 		<img {{bind-attr src=book.image}}>
 	</div>
-	
+
 	<h3>
 		{{book.title}}
 	</h3>
-	
+
 	<p>
 		by {{book.author}}
 	</p>

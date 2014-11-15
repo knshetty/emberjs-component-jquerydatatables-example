@@ -21,16 +21,16 @@ Step1: Setup ember-cli project
 		$ npm install --save-dev broccoli-merge-trees
 		$ npm install --save-dev broccoli-static-compiler
 		$ ember build
-		
+
 	D. Setup project-build environment
 		Configure 'Brocfile.js' for the build, which includes the following depedencies:
-		i. Bootstrap UI framework's dependencies
-		ii. Jquery.dataTables dependencies
-		iii. Datatables-Bootstrap3 dependencies
-	
+		i. "Bootstrap3" UI framework's dependencies
+		ii. "Jquery.dataTables" dependencies
+		iii. "Datatables-Bootstrap3" dependencies
+
 	E. Setup content security policy
-		Enable content security policy in-order to download external resources, such as images. Configuration is carried out in 'config/environment.js' & set the following property:
-		
+		Enable content security policy in-order to download external resources, such as images. Configuration is carried out in 'config/environment.js' by setting the below property:
+
 			var ENV = {
 				...
 				contentSecurityPolicy: {
@@ -42,23 +42,23 @@ Step1: Setup ember-cli project
 	F. Conduct a basic smoke test
 		$ ember server
 		Visit the running app at http://0.0.0.0:4200/emberjs-component-jquerydatatables-example
-	
+
 Step2: Enable CoffeeScript (instead of JavaScript):
 	Install ember-cli CoffeeScript code generator
 		$ npm install ember-cli-coffeescript --save-dev
 
 References:
-	- Offical Ember-cli online documentation 
+	- Offical Ember-cli online documentation
 	  http://www.ember-cli.com/#getting-started
-	
+
 	- Writing Ember.js Components with Ember CLI
 	  http://www.youtube.com/watch?v=WVZXywVpP34&list=UUyoy-08PTHANh_7bcW0GpaA
-	
+
 	- Ember-cli-coffeescript addon
 	  https://github.com/kimroen/ember-cli-coffeescript
-	
+
 	- Setting Up Ember CLI with Emblem and CoffeeScript
 	  http://blogs.visoftinc.com/2014/07/24/setting-up-ember-cli-with-emblem-and-coffeescript/
-	
+
 	- Violating Content Security Policy directive in Ember-cli
 	  http://stackoverflow.com/questions/26192316/violating-content-security-policy-directive-after-ember-cli-0-0-47-upgrade

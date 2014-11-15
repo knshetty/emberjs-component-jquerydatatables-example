@@ -1,4 +1,4 @@
-# An Example App: Emberjs-jquery-datatables Component 
+# An Example App: Emberjs-jquery-datatables Component
 
 This project wraps [jQuery-DataTables](http://www.datatables.net/) as an [ember-component](http://emberjs.com/api/classes/Ember.Component.html) within an [ember-cli](http://www.ember-cli.com/) project template. In doing so, this project acts as a demo application which uses this ember-component to render interactable datatable. Here, the interactions refers to [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) operations on the rendered dataset. Click on the link to access the online [demo app](http://knshetty.github.io/emberjs-component-jquerydatatables-example/).
 
@@ -43,8 +43,8 @@ Note! As of now, there are no unit tests written for this project.
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Bootstrapped This Ember-cli Project From Scratch
-####Step1: Setup ember-cli project
+## How To Bootstrapped This Ember-cli Project From Scratch
+###Step1: Setup ember-cli project
 	A. Create an ember-cli project
 		$ ember new emberjs-component-jquerydatatables-example
 		$ cd ember-jquery-datatables/
@@ -59,29 +59,27 @@ Note! As of now, there are no unit tests written for this project.
 		$ npm install --save-dev broccoli-merge-trees
 		$ npm install --save-dev broccoli-static-compiler
 		$ ember build
-		
+
 	D. Setup project-build environment
 		Configure 'Brocfile.js' for the build, which includes the following depedencies:
-		i. Bootstrap UI framework's dependencies
-		ii. Jquery.dataTables dependencies
-		iii. Datatables-Bootstrap3 dependencies
-	
+		i. "Bootstrap3" UI framework's dependencies
+		ii. "Jquery.dataTables" dependencies
+		iii. "Datatables-Bootstrap3" dependencies
+
 	E. Setup content security policy
-		Enable content security policy in-order to download external resources, such as images. Configuration is carried out in 'config/environment.js' & set the following property:
-		
+		Enable content security policy in-order to download external resources, such as images. Configuration is carried out in 'config/environment.js' by setting the below property:
+
 			var ENV = {
 				...
-				contentSecurityPolicy: {
-					'img-src': "'self' s.it-ebooks-api.info"
-				},
+				contentSecurityPolicy: {'img-src': "'self' s.it-ebooks-api.info"},
 				...
 			}
 
 	F. Conduct a basic smoke test
 		$ ember server
 		Visit the running app at http://0.0.0.0:4200/emberjs-component-jquerydatatables-example
-	
-####Step2: Enable CoffeeScript (instead of JavaScript):
+
+###Step2: Enable CoffeeScript (instead of JavaScript):
 	Install ember-cli CoffeeScript code generator
 		$ npm install ember-cli-coffeescript --save-dev
 

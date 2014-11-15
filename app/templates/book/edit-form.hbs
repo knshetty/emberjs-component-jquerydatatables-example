@@ -1,29 +1,41 @@
-{{#bootstrap-modal-form title="Edit - eBook" submit="update" cancel="cancel"}}
+{{#bootstrap-modal-form title   =  "Edit - eBook"
+                        submit  =  "update"
+                        cancel  =  "cancel"}}
 
-{{#form-key-capture submit="update" cancel="cancel"}}
+{{#form-key-capture submit  =  "update"
+                    cancel  =  "cancel"}}
 	<div class="form-group">
-		<label>
-			Title
-		</label>
-		
-		{{input type="text" placeholder="title" class="form-control" valueBinding="book.title"}}
-    </div>
+    <label>
+      Title
+    </label>
 
-    <div class="form-group">
-		<label>
-			Author
-		</label>
-		
-		{{input type="text" placeholder="author" class="form-control" valueBinding="book.author"}}
-    </div>
-    
-    <div class="form-group">
-		<label>
-			Image URL
-		</label>
-		
-		{{input type="text" placeholder="http://..." class="form-control" valueBinding="book.image"}}
-    </div>
+    {{input type          =  "text"
+            placeholder   =  "title"
+            class         =  "form-control"
+            valueBinding  =  "book.title"}}
+  </div>
+
+  <div class="form-group">
+    <label>
+      Author
+    </label>
+
+    {{input type          =  "text"
+            placeholder   =  "author"
+            class         =  "form-control"
+            valueBinding  =  "book.author"}}
+  </div>
+
+  <div class="form-group">
+    <label>
+      Image URL
+    </label>
+
+    {{input type          =  "text"
+            placeholder   =  "http://..."
+            class         =  "form-control"
+            valueBinding  =  "book.image"}}
+  </div>
 {{/form-key-capture}}
 
 {{/bootstrap-modal-form}}

@@ -1,7 +1,10 @@
 <p>
-	{{link-to "Add an eBook" "books.new" class="btn btn-sm btn-success"}}
+	{{link-to "Add an eBook" "books.new"
+      class="btn btn-sm btn-success"}}
 </p>
 
-{{jquery-datatables valueBinding="modelAsList" columnsBinding="dataTables_Columns"}}
+{{jquery-datatables
+    valueBinding    =  "modelAsList"
+    columnsBinding  =  "dataTables_Columns"}}
 
 {{outlet}}

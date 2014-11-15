@@ -6,9 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/emberjs-component-jquerydatatables-example',
     locationType: 'auto',
-    contentSecurityPolicy: {
-		'img-src': "'self' s.it-ebooks-api.info"
-	},
+    contentSecurityPolicy: {'img-src': "'self' s.it-ebooks-api.info"},
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

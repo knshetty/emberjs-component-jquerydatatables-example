@@ -5,9 +5,13 @@ Router = Ember.Router.extend
   location: config.locationType
 
 Router.map ->
+
 	@resource("books", ->
+
         @route('new')
+
         @resource('book', { path: ':book_id' }, ->
+
             @route('info', { path: '/' })
             @route('edit', { path: '/edit' })
         )

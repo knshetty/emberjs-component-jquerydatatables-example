@@ -20,7 +20,7 @@ var app = new EmberApp();
 var pickFiles = require('broccoli-static-compiler');
 var mergeTrees = require('broccoli-merge-trees');
 
-// Bootstrap UI framework's dependencies
+// --- Bootstrap UI framework's dependencies ---
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 var bootstrapMap = pickFiles('bower_components/bootstrap/dist/css', {
@@ -35,7 +35,7 @@ var bootstrapFonts = pickFiles('bower_components/bootstrap/dist/fonts', {
 	destDir: '/fonts'
 });
 
-// Jquery.dataTables dependencies
+// --- Jquery.dataTables dependencies ---
 app.import('bower_components/datatables/media/js/jquery.dataTables.js');
 app.import('bower_components/datatables/media/css/jquery.dataTables.css');
 var jquery_dataTablesImgs = pickFiles('bower_components/datatables/media/images', {
@@ -49,7 +49,7 @@ var jquery_dataTablesImgs = pickFiles('bower_components/datatables/media/images'
 	destDir: '/images'
 });
 
-// Datatables-Bootstrap3 dependencies
+// --- Datatables-Bootstrap3 dependencies ---
 app.import('bower_components/datatables-bootstrap3/BS3/assets/js/datatables.js');
 app.import('bower_components/datatables-bootstrap3/BS3/assets/css/datatables.css');
 var datatablesBootstrap3Imgs = pickFiles('bower_components/datatables-bootstrap3/BS3/assets/images', {
@@ -62,4 +62,8 @@ var datatablesBootstrap3Imgs = pickFiles('bower_components/datatables-bootstrap3
 	destDir: '/images'
 });
 
-module.exports = mergeTrees([app.toTree(), bootstrapMap, bootstrapFonts, jquery_dataTablesImgs, datatablesBootstrap3Imgs]);
+module.exports = mergeTrees([app.toTree(),
+                             bootstrapMap,
+                             bootstrapFonts,
+                             jquery_dataTablesImgs,
+                             datatablesBootstrap3Imgs]);
