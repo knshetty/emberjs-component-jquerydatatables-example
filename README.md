@@ -47,7 +47,7 @@ Note! As of now, there are no unit tests written for this project.
 ###Step1: Setup ember-cli project
 	A. Create an ember-cli project
 		$ ember new emberjs-component-jquerydatatables-example
-		$ cd ember-jquery-datatables/
+		$ cd emberjs-component-jquerydatatables-example/
 		$ npm install && bower install
 
 	B. Manage your dependcies
